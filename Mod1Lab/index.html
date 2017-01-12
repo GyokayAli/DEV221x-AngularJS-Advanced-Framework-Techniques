@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html ng-app="app">
+
 <head>
     <title>Services and Factories</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+        crossorigin="anonymous">
 </head>
+
 <body ng-controller="sessionController as vm">
     <div class="container">
         <h1>Services and Factories</h1>
@@ -23,11 +26,20 @@
                 <input type="text" class="form-control" ng-model="vm.model.nickname">
             </div>
         </div>
+        <!-- Service -->
         <div class="form-group row">
             <div class="col-sm-8 col-sm-offset-4">
-                <input ng-click="vm.setServiceSession()" type="button" class="btn btn-primary" value="Save with Service" />
-                <input ng-click="vm.getServiceSession()" type="button" class="btn btn-default" value="Retrieve from Service" />
-                <input ng-click="vm.clearServiceSession()" type="button" class="btn btn-default" value="Clear from Service" />
+                <input type="button" class="btn btn-primary" value="Save with Service" ng-click="vm.setServiceSession()" />
+                <input type="button" class="btn btn-default" value="Retrieve from Service" ng-click="vm.getServiceSession()" />
+                <input type="button" class="btn btn-default" value="Clear from Service" ng-click="vm.clearServiceSession()" />
+            </div>
+        </div>
+        <!-- Factory -->
+        <div class="form-group row">
+            <div class="col-sm-8 col-sm-offset-4">
+                <input type="button" class="btn btn-primary" value="Save with Factory" ng-click="vm.setFactorySession()" />
+                <input type="button" class="btn btn-default" value="Retrieve from Factory" ng-click="vm.getFactorySession()" />
+                <input type="button" class="btn btn-default" value="Clear from Factory" ng-click="vm.clearFactorySession()" />
             </div>
         </div>
         <pre>{{vm.model | json}}</pre>
@@ -36,5 +48,8 @@
     <script src="app/app.js"></script>
     <script src="app/sessionController.js"></script>
     <script src="app/sessionService.js"></script>
+    <script src="app/formattingFactory.js"></script>
+    <script src="app/sessionFactory.js"></script>
 </body>
+
 </html>

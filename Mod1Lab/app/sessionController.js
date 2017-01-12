@@ -2,35 +2,12 @@ angular.module('app').controller('sessionController', ['sessionService', 'sessio
 
 function sessionController(sessionService, sessionFactory) {
   var vm = this;
-  var mySessionFactory = sessionFactory();
-  vm.setFactorySession = setFactorySession;
-  vm.getFactorySession = getFactorySession;
-  vm.clearFactorySession = clearFactorySession;
-
-  function getFactorySession() {
-    vm.model = {
-      name: mySessionFactory.get('name'),
-      nickname: mySessionFactory.get('nickname'),
-      status: 'Retrieved by Factory on ' + new Date()
-    };
-  }
-
-  function setFactorySession() {
-    mySessionFactory.save('name', vm.model.name);
-    mySessionFactory.save('nickname', vm.model.nickname);
-    getFactorySession();
-  }
-
-  function clearFactorySession() {
-    mySessionFactory.clear();
-    getFactorySession();
-  }
 
   vm.getServiceSession = function () {
     vm.model = {
       name: sessionService.get('name'),
       nickname: sessionService.get('nickname'),
-      status: 'Retrieved by service on ' + new Date()
+      status: 'Retrieved by Service on ' + new Date()
     };
   };
 
@@ -44,4 +21,27 @@ function sessionController(sessionService, sessionFactory) {
     sessionService.clear();
     vm.getServiceSession();
   };
+
+  vm.getFactorySession = getFactorySession;
+  vm.setFactorySession = setFactorySession;
+  vm.clearFactorySession = clearFactorySession;
+
+  function getFactorySession() {
+    vm.model = {
+      name: sessionFactory.get('name'),
+      nickname: sessionFactory.get('nickname'),
+      status: 'Retrieved by Factory on ' + new Date()
+    };
+  }
+
+  function setFactorySession() {
+    sessionFactory.save('name', vm.model.name);
+    sessionFactory.save('nickname', vm.model.nickname);
+    getFactorySession();
+  }
+
+  function clearFactorySession() {
+    sessionFactory.clear();
+    getFactorySession();
+  }
 }
