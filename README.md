@@ -1,4 +1,4 @@
-# DEV221x AngularJS Advanced Framework Techniques
+# DEV221x: AngularJS Advanced Framework Techniques
 <a href="https://www.edx.org/course/angularjs-advanced-framework-techniques-microsoft-dev221x"><i>AngularJS Advanced Framework Techniques Course by Microsoft at edX</i></a>
 
 Angular version: 1.6x
