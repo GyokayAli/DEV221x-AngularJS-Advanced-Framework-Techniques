@@ -14,21 +14,21 @@ Angular version: 1.6x
             </thead>
             <tbody>
                 <tr>
-                    <td><a href="https://github.com/GyokayAli/DEV220x-AngularJS-Framework-Fundamentals/tree/master/Mod1Lab">
+                    <td><a href="https://github.com/GyokayAli/DEV221x-AngularJS-Advanced-Framework-Techniques/tree/master/Mod1Lab">
                 Module 1: Angular Services for Data Access
               </a></td>
                     <td class="topics">Implementing a Session Service and Implementing a Session Factory</td>
                 </tr>
                 <tr>
-                    <td><a href="https://github.com/GyokayAli/DEV220x-AngularJS-Framework-Fundamentals/tree/master/Mod2Lab">
+                    <td><a href="https://github.com/GyokayAli/DEV221x-AngularJS-Advanced-Framework-Techniques/tree/master/Mod2Lab">
                 Module 2: Directives and Scope
               </a></td>
                     <td class="topics">Creating a Basic Directive, Creating an Advanced Directive, Implementing Isolated Scope and Manipulating DOM with Link Functions</td>
                 </tr>
                 <tr>
-                    <td>
+                    <td><a href="https://github.com/GyokayAli/DEV221x-AngularJS-Advanced-Framework-Techniques/tree/master/Mod3Lab">
                         Module 3: Bootstrap and ngAnimate
-                    </td>
+                        </a></td>
                     <td class="topics">UI Components with Angular Bootstrap and Using <b>ng-animate</b></td>
                 </tr>
                 <tr>
